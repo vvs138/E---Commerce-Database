@@ -1,0 +1,55 @@
+-- Insert sample users
+INSERT INTO Users (Username, Password, Email) VALUES
+('john_doe', 'password123', 'john@example.com'),
+('jane_smith', 'mypassword', 'jane@example.com'),
+('alice_wonder', 'alice123', 'alice@example.com'),
+('bob_builder', 'bob456', 'bob@example.com'),
+('charlie_brown', 'charlie789', 'charlie@example.com'),
+('daisy_duck', 'daisy@quack.com', 'daisy@example.com'),
+('eve_online', 'evepass', 'eve@example.com'),
+('frank_castle', 'frank@punisher.com', 'frank@example.com'),
+('george_jetson', 'george@future.com', 'george@example.com'),
+('harry_potter', 'wand123', 'harry@example.com');
+
+-- Insert sample products
+INSERT INTO Products (ProductName, Price, Stock, Description) VALUES
+('Laptop', 799.99, 10, 'A high-performance laptop'),
+('Smartphone', 499.99, 25, 'A latest model smartphone'),
+('Headphones', 89.99, 50, 'Noise-cancelling headphones'),
+('Smartwatch', 199.99, 15, 'A smartwatch with fitness tracking'),
+('Tablet', 299.99, 20, 'A lightweight tablet for on-the-go'),
+('Camera', 499.99, 5, 'A high-quality digital camera'),
+('Bluetooth Speaker', 59.99, 30, 'Portable Bluetooth speaker'),
+('Gaming Console', 399.99, 8, 'Next-gen gaming console'),
+('Monitor', 199.99, 12, 'High-definition computer monitor'),
+('Keyboard', 49.99, 40, 'Mechanical keyboard with RGB lights');
+
+-- Insert sample orders
+INSERT INTO Orders (UserID, TotalAmount) VALUES
+(1, 899.98),  -- John Doe orders a Laptop and Headphones
+(2, 199.99),  -- Jane Smith orders a Smartwatch
+(3, 299.99),  -- Alice Wonder orders a Tablet
+(4, 399.99),  -- Bob Builder orders a Gaming Console
+(5, 149.98),  -- Charlie Brown orders a Bluetooth Speaker and Keyboard
+(6, 499.99),  -- Daisy Duck orders a Camera
+(7, 89.99),   -- Eve Online orders Headphones
+(8, 499.99),  -- Frank Castle orders a Smartphone
+(9, 599.99),  -- George Jetson orders a Laptop and Monitor
+(10, 200.00);  -- Harry Potter orders a Tablet and Headphones
+
+-- Insert order items for the orders
+INSERT INTO Order_Items (OrderID, ProductID, Quantity) VALUES
+(1, 1, 1), -- John Doe: 1 Laptop
+(1, 3, 1), -- John Doe: 1 Headphone
+(2, 4, 1), -- Jane Smith: 1 Smartwatch
+(3, 5, 1), -- Alice Wonder: 1 Tablet
+(4, 8, 1), -- Bob Builder: 1 Gaming Console
+(5, 7, 1), -- Charlie Brown: 1 Bluetooth Speaker
+(5, 10, 1), -- Charlie Brown: 1 Keyboard
+(6, 6, 1), -- Daisy Duck: 1 Camera
+(7, 3, 1), -- Eve Online: 1 Headphone
+(8, 2, 1), -- Frank Castle: 1 Smartphone
+(9, 1, 1), -- George Jetson: 1 Laptop
+(9, 9, 1), -- George Jetson: 1 Monitor
+(10, 5, 1), -- Harry Potter: 1 Tablet
+(10, 3, 1); -- Harry Potter: 1 Headphone
